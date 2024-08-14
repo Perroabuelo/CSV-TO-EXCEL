@@ -1,8 +1,8 @@
 import tkinter as tk
-
+g
 
 class Window:
-
+g
     def __init__(self):
         window = tk.Tk()
         window.minsize(width=500, height=500)
