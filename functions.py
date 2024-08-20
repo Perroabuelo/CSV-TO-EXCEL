@@ -1,4 +1,3 @@
-import tkinter
 from tkinter import filedialog
 import pathlib
 def select_data():
