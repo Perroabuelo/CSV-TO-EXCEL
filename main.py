@@ -1,6 +1,10 @@
 from tkinter import filedialog, Tk
 import pandas
+
+
 game = True
+
+#Abre un cuadro de dialogo para elegir un archivo.csv
 def select_file():
     window = Tk()
     window.withdraw()
@@ -9,6 +13,8 @@ def select_file():
     data_path = filedialog.askopenfilename()
     window.destroy()
     return data_path
+
+#Abre un cuadro de dialogo para elegir la carpeta donde se guardará el archivo.xlsx
 
 def save_file():
     window = Tk()
@@ -25,7 +31,9 @@ print("Hola\nSelecciona un archivo '.csv' y lo transformaré en un Excel")
 file = select_file()
 data = pandas.read_csv(file, encoding="latin-1")
 
+#Ejecuta el programa hasta que se guarde el archivo o el usuario cancele la acción
 while game:
+
     print("Elige la carpeta en la que guardaras el archivo")
     save_path = save_file()
     if save_path:
